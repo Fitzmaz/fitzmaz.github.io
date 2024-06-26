@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="css/pico.min.css">
+  <script>
+    function show() {
+      console.log('btn clicked')
+      const btn = document.getElementById('show-btn');
+      btn.setAttribute('aria-busy', true);
+      setTimeout(() => {
+        btn.setAttribute('aria-busy', false);
+      }, 3000);
+    }
+  </script>
+</head>
+
+<body>
+  <main class="container">
+    <canvas></canvas>
+    <input type="text" name="text" placeholder="Item Name" aria-label="Text" />
+    <button id="show-btn" onclick="show()">Query</button>
+  </main>
+</body>
+
+</html>
